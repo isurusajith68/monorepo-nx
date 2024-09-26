@@ -22,14 +22,14 @@ jobs:
       - name: Install pnpm
         run: npm i -g pnpm
 
-      # - name: Install Dependencies
-      #   run: pnpm install --filter @new/web
-      # Install all dependencies in the monorepo recursively
       - name: Install Dependencies
-        run: pnpm recursive install
+        run: pnpm install --filter @new/web
+      # Install all dependencies in the monorepo recursively
+      # - name: Install Dependencies
+      #   run: pnpm recursive install
         
       - name: Build React.js App
-        run: pnpm --filter @new/test-work-flow build
+        run:  pnpm exec nx run @new/test-work-flow:build
 
       - name: Deploy React.js App
         run: echo "Deploying React.js App..."
