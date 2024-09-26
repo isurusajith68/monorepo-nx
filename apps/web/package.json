@@ -13,6 +13,7 @@
     "@new/forms": "workspace:^",
     "@new/sample-lib": "workspace:^",
     "@new/ui": "workspace:^",
+    "axios": "^1.7.7",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18"

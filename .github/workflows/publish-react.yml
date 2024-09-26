@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'apps/nextjs-app/**'
 
 jobs:
   build-and-publish:
@@ -22,15 +20,10 @@ jobs:
           cache: 'pnpm'
 
       - name: Install Dependencies
-        run: pnpm install --filter ./apps/nextjs-app...
+        run: pnpm install --filter @new/web
 
       - name: Build Next.js App
-        run: pnpm --filter ./apps/nextjs-app build
-
-      - name: Publish to npm
-        run: pnpm --filter ./apps/nextjs-app publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm --filter @new/web build
 
       - name: Deploy Next.js App
         run: echo "Deploying Next.js App..."
