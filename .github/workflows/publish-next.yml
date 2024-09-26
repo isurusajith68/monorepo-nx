@@ -6,7 +6,6 @@ on:
       - master
     paths:
       - 'apps/web/**'
-
 jobs:
   build-and-publish:
     name: Build and Publish Next.js App
@@ -19,14 +18,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'pnpm'
           
       - name: Install pnpm
-        run: pnpm install
+        run: npm i -g pnpm
 
+      # - name: Install Dependencies
+      #   run: pnpm install --filter @new/web
+      # Install all dependencies in the monorepo recursively
       - name: Install Dependencies
-        run: pnpm install --filter @new/web
-
+        run: pnpm recursive install
+        
       - name: Build Next.js App
         run: pnpm --filter @new/web build
 
