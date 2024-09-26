@@ -24,6 +24,9 @@ importers:
 
   apps/test-work-flow:
     dependencies:
+      '@new/forms':
+        specifier: workspace:^
+        version: link:../../libs/forms
       '@testing-library/jest-dom':
         specifier: ^5.17.0
         version: 5.17.0
