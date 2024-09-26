@@ -28,8 +28,8 @@ jobs:
       - name: Install Dependencies
         run: pnpm recursive install
         
-      - name: Build Next.js App
+      - name: Build React.js App
         run: pnpm --filter @new/test-work-flow build
 
-      - name: Deploy Next.js App
-        run: echo "Deploying Next.js App..."
+      - name: Deploy React.js App
+        run: echo "Deploying React.js App..."
