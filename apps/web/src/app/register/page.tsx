@@ -4,7 +4,7 @@ export default function RegisterPage() {
   return (
     <div>
       <Register />
-      bbjbb
+      bbjbb sdd
     </div>
   )
 }
