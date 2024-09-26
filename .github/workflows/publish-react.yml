@@ -19,9 +19,8 @@ jobs:
           node-version: '18'
           cache: 'pnpm'
 
-      # Install pnpm globally
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: pnpm install
 
       - name: Install Dependencies
         run: pnpm install --filter @new/web
