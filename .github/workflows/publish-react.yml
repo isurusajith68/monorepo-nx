@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'apps/api/test-work-flow/*'
+      - 'apps/api/**'
 jobs:
   build-and-publish:
     name: Build and Publish React App
