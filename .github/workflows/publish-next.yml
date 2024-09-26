@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - master
-
+    paths:
+      - 'apps/web/**'
 jobs:
   build-and-publish:
     name: Build and Publish Next.js App
