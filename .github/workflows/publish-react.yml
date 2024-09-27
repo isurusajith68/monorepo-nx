@@ -30,7 +30,7 @@ jobs:
         run: pnpm recursive install
         
       - name: Build React.js App
-        run:  pnpm exec nx run @new/react-app:build
+        run:  pnpm --filter @new/react-app build
 
       - name: Deploy React.js App
         run: echo "Deploying React.js App..."
