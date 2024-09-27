@@ -22,11 +22,8 @@ importers:
         specifier: 19.8.2
         version: 19.8.2(@swc/core@1.7.28(@swc/helpers@0.5.5))
 
-  apps/test-work-flow:
+  apps/react-app:
     dependencies:
-      '@new/forms':
-        specifier: workspace:^
-        version: link:../../libs/forms
       '@testing-library/jest-dom':
         specifier: ^5.17.0
         version: 5.17.0
