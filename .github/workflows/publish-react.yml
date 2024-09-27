@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - 'apps/react-app/**'
-      
+
 jobs:
   build-and-publish:
     name: Build and Publish React App
@@ -24,13 +24,13 @@ jobs:
         run: npm i -g pnpm
 
       - name: Install Dependencies
-        run: pnpm install --filter @new/web
+        run: pnpm install --filter @new/react-app
       # Install all dependencies in the monorepo recursively
       # - name: Install Dependencies
       #   run: pnpm recursive install
         
       - name: Build React.js App
-        run:  pnpm exec nx run @new/test-work-flow:build
+        run:  pnpm exec nx run @new/react-app:build
 
       - name: Deploy React.js App
         run: echo "Deploying React.js App..."
